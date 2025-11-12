@@ -5,6 +5,10 @@ public class CountCoin : MonoBehaviour
     // coin を獲得した時に獲得できる Score
     // 変数名は coinScore にする。型名は int にする（小数点を使わないので）
     public int coinScore = 10;
+    void  FixedUpdate()
+    {
+        transform.Rotate(Vector3.up * 5.0f);
+    }
 
     // OnTriggerEnter を使えたら使っても良い（そっちの方が自然になるので）
     private void OnCollisionEnter(Collision collision)
