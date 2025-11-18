@@ -1,10 +1,11 @@
 using UnityEngine;
+using UnityEngine.Jobs;
 
 public class MoveCharacter : MonoBehaviour
 {
     Rigidbody rb;
     Vector3 moveForward;
-    public float speed = 15.0f;
+    public float speed = 1.0f;
     public KeyCode rightKey = KeyCode.D;
     public KeyCode leftKey = KeyCode.A;
 
@@ -27,13 +28,20 @@ public class MoveCharacter : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        rb.AddForce(moveForward * speed);
+        rb.AddForce(moveForward * speed, ForceMode.Impulse);
     }
     public void Respawn()
     {
         GetComponent<Rigidbody>().linearVelocity = Vector3.zero;
         transform.position = playerPos;
         transform.rotation = Quaternion.Euler(0, 90, 0);
+    }
+    public void checkPoint()
+    {
+        GetComponent<Rigidbody>().linearVelocity = Vector3.zero;
+        transform.position = transform.position + new Vector3(0.0f, 2.5f, 0.0f);
+        transform.rotation = Quaternion.Euler(0, 90, 0);
+        playerPos = transform.position;
     }
     void Update()
     {

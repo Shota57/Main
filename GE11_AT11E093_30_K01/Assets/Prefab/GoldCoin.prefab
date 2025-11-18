@@ -94,7 +94,7 @@ MeshCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 133640060910526149}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 3618c702bc3cc2644ad04f20526bb7eb, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -120,6 +120,7 @@ GameObject:
   - component: {fileID: 3989717237951457658}
   - component: {fileID: 1947028890326865517}
   - component: {fileID: 8851008013210659965}
+  - component: {fileID: 4472600404837857071}
   m_Layer: 0
   m_Name: GoldCoin
   m_TagString: Untagged
@@ -183,3 +184,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinScore: 10
+--- !u!64 &4472600404837857071
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2325863209940261691}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 0}

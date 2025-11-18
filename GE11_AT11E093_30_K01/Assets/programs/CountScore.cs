@@ -25,6 +25,6 @@ public class CountScore : MonoBehaviour
         score += addedScore;
 
         // coinTx の text を「Score : （score を文字列変換したもの）」にする
-        coinTx.text = "Score : " + score.ToString();
+        coinTx.text = "COIN : " + score.ToString();
     }
 }
