@@ -5,6 +5,15 @@ public class EnemyController : MonoBehaviour
     // ジャンプ力を定義する変数「addJump」を設定
     // 型はfloatにする
     public float addJump = 5.0f;
+    void FixedUpdate()
+    {
+        //Enemyをプレイヤーに向かって地上を移動させる
+        GameObject player = GameObject.Find("Player");
+        Vector3 direction = (player.transform.position - transform.position).normalized;
+        direction.y = 0; // 垂直方向の移動を防ぐ
+        float speed = 2.0f;
+        transform.position += direction * speed * Time.fixedDeltaTime;
+    }
 
     // 接触判定を取る
     private void OnCollisionEnter(Collision collision)

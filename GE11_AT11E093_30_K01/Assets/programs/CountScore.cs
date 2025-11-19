@@ -5,7 +5,7 @@ using UnityEngine;
 public class CountScore : MonoBehaviour
 {
     // スコアを定義する変数「score」をint型で作成
-    int score;
+    public static int score;
 
     // コインのテキストを格納する変数「coinTx」をText型で作成
     Text coinTx;

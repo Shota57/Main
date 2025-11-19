@@ -36,6 +36,12 @@ public class MoveCharacter : MonoBehaviour
         transform.position = playerPos;
         transform.rotation = Quaternion.Euler(0, 90, 0);
     }
+    public void tpHit()
+    {
+        GetComponent<Rigidbody>().linearVelocity = Vector3.zero;
+        transform.position = new Vector3(-12.0f, 62.0f,0.0f);
+        transform.rotation = Quaternion.Euler(0, 90, 0);
+    }
     public void checkPoint()
     {
         GetComponent<Rigidbody>().linearVelocity = Vector3.zero;
@@ -46,7 +52,7 @@ public class MoveCharacter : MonoBehaviour
     void Update()
     {
         Vector3 center = transform.position + Vector3.down * 0.41f;
-        float radius = 0.2f;
+        float radius = 0.1f;
         LayerMask layer = LayerMask.GetMask("Ground");
         bool isGround = Physics.CheckSphere(center, radius, layer);
         Debug.Log(isGround);
